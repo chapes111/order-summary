@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@use './_minireset.min.css';
+html {
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  background: url("../images/pattern-background-mobile.svg");
+  background-color: #e0e8ff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  width: 20em;
+  height: 35em;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: -1px 20px 46px -20px rgba(0, 0, 0, 0.44);
+          box-shadow: -1px 20px 46px -20px rgba(0, 0, 0, 0.44);
+  margin: auto;
+  overflow: hidden;
+}
+
+.card .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .container .hero-img {
+  width: 100%;
+}
+
+.card .container .after-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em 2em 0 2em;
+}
+
+.card .container .after-img .hero-heading {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: .5em auto .5em auto;
+}
+
+.card .container .after-img .tagline {
+  color: #7280a7;
+  line-height: 1.7;
+  margin: 0 auto 1.5em auto;
+  text-align: center;
+}
+
+.card .container .after-tag .plan-card {
+  background: #f5f7ff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 auto 1.5em auto;
+  width: 17em;
+  height: 5em;
+}
+
+.card .container .after-tag .plan-card .music-icon {
+  margin: 1em;
+}
+
+.card .container .after-tag .plan-card .plan-details {
+  margin: 1em 2em 0 0;
+}
+
+.card .container .after-tag .plan-card .plan-details p {
+  padding-top: .2em;
+  margin: 0;
+}
+
+.card .container .after-tag .plan-card .plan-details .plan-type {
+  font-weight: 700;
+}
+
+.card .container .after-tag .plan-card .plan-details .plan-price {
+  color: #7280a7;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.card .container .after-tag .plan-card .change-plan {
+  margin: auto 0;
+}
+
+.card .container .after-tag .pay {
+  background: #3829e0;
+  color: #f5f7ff;
+  border-radius: .5em;
+  -webkit-box-shadow: -1px 1px 46px -20px rgba(0, 0, 0, 0.44);
+          box-shadow: -1px 1px 46px -20px rgba(0, 0, 0, 0.44);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .9rem;
+  font-weight: 900;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 18em;
+  height: 3em;
+}
+
+.card .container .after-tag .pay:hover {
+  background: #1f2f56;
+}
+
+.card .container .after-tag .cancel {
+  background: white;
+  color: #7280a7;
+  border-radius: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: .9rem;
+  font-weight: 900;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  width: 18em;
+  height: 3em;
+}
+
+@media (min-width: 700px) {
+  body {
+    background: url("../images/pattern-background-desktop.svg");
+    background-color: #e0e8ff;
+  }
+  .card {
+    width: 30em;
+    height: 39em;
+  }
+  .card .container .after-img .tagline {
+    margin: 0 1.7em 1em 1.7em;
+  }
+  .card .container .after-tag .plan-card {
+    width: 22em;
+  }
+  .card .container .after-tag .plan-card .plan-details {
+    margin: 1em 6em 0 0;
+  }
+  .card .container .after-tag .pay {
+    margin: 1em auto 0 auto;
+    width: 25em;
+  }
+  .card .container .after-tag .cancel {
+    margin: 1em auto 0 auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */

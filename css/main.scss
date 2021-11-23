@@ -1,0 +1,194 @@
+@use './_minireset.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$v-pale-blue: hsl(225, 100%, 98%);
+$desat-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+html {
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  background: url('../images/pattern-background-mobile.svg');
+  background-color: $pale-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  width: 20em;
+  height: 35em;
+  background: white;
+  border-radius: 20px;
+  box-shadow: -1px 20px 46px -20px rgba(0,0,0,0.44);
+  margin: auto;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .hero-img {
+      width: 100%;
+    }
+
+    .after-img {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1.5em 2em 0 2em;
+
+      .hero-heading {
+        font-size: 1.4rem;
+        font-weight: 900;
+        margin: .5em auto .5em auto;
+      }
+
+      .tagline {
+        color: $desat-blue;
+        line-height: 1.7;
+        margin: 0 auto 1.5em auto;
+        text-align: center;
+      }
+    }
+
+    .after-tag {
+
+      .plan-card {
+        background: $v-pale-blue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0 auto 1.5em auto;
+
+        width: 17em;
+        height: 5em;
+
+        .music-icon {
+          margin: 1em;
+        }
+
+        .plan-details {
+          margin: 1em 2em 0 0;
+
+          p {
+            padding-top: .2em;
+            margin: 0;
+          }
+
+          .plan-type {
+            font-weight: 700;
+          }
+
+          .plan-price {
+            color: $desat-blue;
+            font-size: .9rem;
+            font-weight: 500;
+          }
+        }
+
+        .change-plan {
+          margin: auto 0;
+        }
+      }
+
+      .pay {
+        background: $bright-blue;
+        color: $v-pale-blue;
+        border-radius: .5em;
+        box-shadow: -1px 1px 46px -20px rgba(0,0,0,0.44);
+        display: flex;
+        flex-direction: column;
+        font-size: .9rem;
+        font-weight: 900;
+        justify-content: center;
+        margin-top: 1em;
+        text-align: center;
+        text-decoration: none;
+        width: 18em;
+        height: 3em;
+
+        &:hover {
+          background: $dark-blue;
+        }
+      }
+
+      .cancel {
+        background: white;
+        color: $desat-blue;
+        border-radius: .5em;
+        display: flex;
+        flex-direction: column;
+        font-size: .9rem;
+        font-weight: 900;
+        justify-content: center;
+        margin-top: 1em;
+        text-align: center;
+        text-decoration: none;
+        width: 18em;
+        height: 3em;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  body {
+    background: url('../images/pattern-background-desktop.svg');
+    background-color: $pale-blue;
+  }
+
+  .card {
+    width: 30em;
+    height: 39em;
+
+    .container {
+
+      .after-img {
+
+        .tagline {
+          margin: 0 1.7em 1em 1.7em;
+        }
+      }
+
+      .after-tag {
+
+        .plan-card {
+
+          width: 22em;
+
+          .plan-details {
+            margin: 1em 6em 0 0;
+          }
+        }
+
+        .pay {
+          margin: 1em auto 0 auto;
+
+          width: 25em;
+        }
+
+        .cancel {
+          margin: 1em auto 0 auto;
+        }
+      }
+    }
+  }
+}
